@@ -33,7 +33,7 @@ for category in categories:
             print('Exception:', e)
             # if any exception rasied, the exception will be printed here. And pass to the next image
 
-data=np.array(data)/255.0
+data=np.array(data)/255.0 #normalization
 data=np.reshape(data,(data.shape[0],img_size,img_size,1))
 target=np.array(target)
 new_target=np_utils.to_categorical(target)
